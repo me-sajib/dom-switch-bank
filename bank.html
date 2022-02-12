@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="container mx-auto">
+      <header>
+        <h1 class="md:text-6xl sm:text-5xl text-center text-green-500 my-10">Account Summary</h1>
+        <!--==============================================
+               =        all Balance code below area      =
+            ===============================================
+              -->
+        <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-6">
+          <!--==============================================
+               =       deposit area code below here        =
+               ==============================================
+              -->
+          <div
+            class="bg-green-600 text-white p-5 rounded-full text-center"
+          >
+            <h2 class="text-4xl pb-3">Deposit</h2>
+            <h3 class="text-3xl" id="deposit">0</h3>
+          </div>
+          <!--==============================================
+               =        withdraw area code below here      =
+               ==============================================
+              -->
+          <div class="bg-red-600 text-white p-5 rounded-full text-center">
+            <h2 class="text-4xl pb-3">Withdraw</h2>
+            <h3 class="text-3xl" id="withdraw">20</h3>
+          </div>
+           <!--==============================================
+               =        balance area code below here        =
+               ===============================================
+              -->
+          <div class="bg-purple-600 text-white p-5 rounded-full text-center">
+            <h2 class="text-4xl pb-3">Balance</h2>
+            <h3 class="text-3xl" id="balance">100</h3>
+          </div>
+          <!-- end of all balance area -->
+        </div>
+        <!-- end of grid column -->
+      </header>
+
+      <!--===============================================
+      =            Deposit and withdraw area            =
+      =  grid column use and is responsive small devise =  
+          ==================================================
+        -->
+        <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-6 mt-16">
+             <!--===============================================
+                deposit area , deposit amount input and deposit button
+                ==================================================
+              -->
+            <div class="Deposit bg-green-500 text-white p-5 rounded-full text-center">
+            <h2 class="text-4xl pb-3 mb-3">Deposit</h2>
+            <input
+                type="number"
+                id="deposit-input"
+                class="border border-gray rounded block w-3/4 p-3 text-black mx-auto mb-4"
+                placeholder="enter your deposit amount please"
+            />
+            <button
+                id="deposit-btn"
+                class="bg-violet-500 hover:bg-violet-400 text-white rounded px-6 py-2"
+            >
+                Deposit
+            </button>
+            </div>
+            <!--===============================================
+                withdraw area , this area is withdraw input and withdraw button
+                ==================================================
+              -->
+            <div class="bg-red-600 text-white p-5 rounded-full text-center">
+            <h2 class="text-4xl pb-3 mb-3">Withdraw</h2>
+            <input
+                type="number"
+                id="withdraw-input"
+                class="border border-gray rounded block w-3/4 mx-auto text-black p-3 mb-4"
+                placeholder="enter your withdraw amount please"
+            />
+            <button
+                id="withdraw-btn"
+                class="bg-pink-500 hover:bg-red-200 hover:text-black text-white rounded px-6 py-2"
+            >
+                Withdraw
+            </button>
+            </div>
+    </main>
+<!-- bank calculation js code link -->
+    <script src="js/bank.js"></script>
+  </body>
+</html>
